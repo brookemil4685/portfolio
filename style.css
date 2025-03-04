@@ -1,0 +1,79 @@
+/* All of this coding is explained on the Pstyle.css page */
+
+#navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 30px;
+    padding-top: 10px; 
+}
+
+.nav-item a {
+    font-family:"caveat", cursive ;
+    font-weight: 500;
+    font-size:1.5em;
+    font-style: normal;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-item {margin: 0;}
+
+body{
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: white;
+    margin: auto;
+}
+
+h1{
+    font-family: "permanent marker", cursive;
+    font-size: 3em;
+    font-weight: 100;
+    color: #383636;
+    text-align: center;
+    padding-top: 40px;
+}
+
+    img {
+        display: block;
+        margin: auto;
+        width: 95%;
+        height: auto;
+        max-width: 500px;
+      
+    }
+
+
+h2{
+    padding-top: 65px;
+    font-family: "grape nuts", cursive;
+    font-weight: 900;
+}
+
+p{
+    font-family: "arvo", serif;
+    font-weight: 400;
+    font-style: italic;
+    color:#383636;
+    padding-bottom: 10px;
+    line-height: 1.3em;
+}
+
+
+#contact {
+
+    border: 3px solid black;
+    padding: 5px;
+    margin: 70px;
+    font-style: italic;
+    text-align: center;
+}
+
+
+@media (orientation:portrait) {
+    #content {
+        width:100%;
+    }
+        }
