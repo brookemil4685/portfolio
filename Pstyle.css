@@ -46,25 +46,39 @@ h2 {
     align-items: center; /* Aligns items vertically */
     gap: 20px; /* Adds space between image and text */
     justify-content: center; /* Centers the content */
- }
+    max-width: 900px; /* Prevents container from stretching too much */
+    margin: 0 auto; /* Centers the container */
+    flex-wrap: wrap; /* Allows text to move below image on smaller screens */
+}
 
- 
- .container p {
+.container figcaption {
+    font-size: 14px; /* Set to a readable size instead of 5% */
+    color: gray;
+    text-align: center;
+    margin-top: 5px;
+    font-style: italic;
+    max-width: 300px; /* Prevents it from stretching too wide */
+}
+
+.container p {
     font-size: 1.2em;
     line-height: 1.3; /* Adjusts line spacing */
     text-align: justify;
     max-width: 700px; /* Limits width for better readability */
     margin: 0; /* Centers the text */
-    padding-left: 5px; /* Adds slight left padding between image and text*/
+    padding-left: 5px; /* Adds slight left padding between image and text */
 }
 
 .container img {
-    width: 50%; /* Sets default image width */
-    max-width: 300px; /* Prevents it from getting too large */
+    width: auto; /* Keeps natural size */
+    max-width: 300px; /* Limits maximum size */
+    min-width: 150px; /* Ensures it doesn’t shrink too much */
     display: block; /* Prevents extra spacing below the image */
-    margin: 0; /* Centers the image */
+    margin: 0 auto; /* Centers the image */
     border-radius: 10px; /* Adds rounded corners */
+    height:auto;
 }
+
 
 #audio {
     display: flex;
@@ -74,9 +88,14 @@ h2 {
     margin-top: 20px; /* Adds space above */
 }
 
-#transcript {
+#transcript a {
     color: black; 
-    margin-top: 10px;
+    display: flex;
+margin-bottom: 0;
+    font-family: "permanent marker", cursive;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
     font-size: 16px;
 }
 
@@ -93,19 +112,36 @@ h2 {
     display: flex;
     align-items: center; /* Aligns items vertically */
     justify-content: center; /* Centers the content */
-    gap: 20px; /* Adds space between image & chart */
+    gap: 15px; /* Adds space between image & chart */
+    flex-wrap: nowrap;
+    overflow: hidden;
+    padding: 40px;
+}
+
+.container2 figure {
+    width: 45%;
+    text-align: center;
+    margin: 0px;
 }
 
 .container2 img {
-    width: 50%; /* Adjust as needed */
-    max-width: 500px;
+    width: 100%; /* Adjust as needed */
+    max-width: 100%;
     height: auto; /* Keeps aspect ratio */
     display: block;
+
+}
+
+.container2 figcaption {
+    font-size: 15px;
+    width: 100%;
 }
 
 .container2 .flourish-embed {
-    
-    max-width: 800px; /* Limits the charts size */
+width:100%;
+margin-left: auto;
+    max-width: 100%; /* Limits the charts size */
+    margin-left: 0px;
 }
 
 #whiskers iframe {
@@ -119,35 +155,34 @@ h2 {
 }
 
 #PW p {
-    margin-top: 0; 
-    padding-top: 50px; 
+    font-size: 1.2em;
+    margin: auto; 
+    padding-top: 20px; 
     line-height: 1.4;
     text-align: justify;
     max-width: 700px;
-    margin: auto;
+    padding-bottom: 50px;
 }
 
-
+#Sourcing { 
+    border: 3px solid black;
+    padding: 5px;
+    margin: auto;
+    font-style: italic;
+    text-align: center;
+    max-width: 500px
+}
 
 
 
 
 /* Adjusts media for web and mobile screens */
 
-@media (max-width: 768px) {
-    .container img {
-        width: 40%; /* Takes full width on smaller screens */
-    }
-    
-    .container p {
-        font-size: 1em; /* Slightly smaller text for readability */
-        padding: 5px;
-    }
-}
+
 
 
 @media (orientation:portrait) {
     #content {
-        width:100%;
+        width:80%;
     }
         }
